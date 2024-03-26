@@ -1,0 +1,10 @@
+Comando do DML (linguagem de manupulação de dados)
+CRUDS
+- insert into Nome_tabela(atribtosA,atribtosB,atribtosB) values(valorA,valorB,valorC), (valorA,valorB,valorC);
+
+- UPDATE nome_tabela SET nome_coluna ='valor' WHERE <condição>;
+
+- select * from nome_tabela  -> para selecionar todos os atributos da tabela 
+- select col1, col2, col... from nome_tabela  -> para selecionar colunas especificas
+
+-
