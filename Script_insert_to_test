@@ -1,0 +1,36 @@
+INSERT INTO pessoa (nome, cpf, data_nascimento, id_tipo_pessoa)
+       VALUES
+      ('Leandro Carlos', '12345687653', '19-08-1989', 2),
+      ('Fabio Henrique','09878694537' , '15-02-1989',1 ),
+      ('Ana Pinheiro','56774987634' , '21-10-1899', 3);
+	  
+INSERT INTO matricula (id_pessoa,id_curso)
+       VALUES
+      ('Calculo 1', 250),
+      ('Fisica 1',400),
+	  ('HTML 5',400),
+	  ('PHP 8',560),
+      ('POO', 150);
+
+INSERT INTO matricula_curso (id_curso_pessoa,pessoa_id)
+       VALUES
+      (1,1),
+      (1,2),
+	  (2,2),
+	  (3,3),
+      (5,4);
+	  
+INSERT INTO tipo_curso (tipo)
+       VALUES
+      ('Presencial'),
+      ('EAD'),
+	  ('Hibrido');
+	  
+INSERT INTO tipo_pessoa (tipo)
+       VALUES
+      ('Usuario'),
+      ('Administrador'); 
+	  
+select pessoa.nome as "Nome", pessoa.cpf as "CPF", pessoa.data_nascimento as "Data de Nascimento", tipo_pessoa.tipo as "Tipo" from pessoa
+inner join tipo_pessoa on pessoa.id_tipo_pessoa = tipo_pessoa.id
+
